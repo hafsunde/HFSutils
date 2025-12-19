@@ -1,9 +1,9 @@
 Package: HFSutils
-Title: What the Package Does (One Line, Title Case)
+Title: Personal utility functions for HFS
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+    person("Hans Fredrik", "Sunde", , "hafsunde@gmail.com", role = c("aut", "cre"))
+Description: Personal utility functions.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
@@ -14,3 +14,5 @@ BugReports: https://github.com/hafsunde/HFSutils/issues
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Imports: 
+    ggplot2

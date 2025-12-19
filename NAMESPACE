@@ -2,6 +2,8 @@
 
 export(HFS_theme)
 export(SEtoCI)
+export(convert_edu_level_to_group)
+export(convert_edu_level_to_years)
 export(cor_fastCI)
 export(exact_rnorm)
 export(expSup)

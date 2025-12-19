@@ -23,6 +23,20 @@ Computes confidence intervals from point estimates and standard errors.
 Optionally applies Fisher's z-transformation for correlations.
 }
 \details{
-If \code{is_correlation = TRUE}, confidence intervals are computed on the
-Fisher z scale and then back-transformed to the correlation scale.
+For correlations, confidence intervals are computed on the Fisher z scale
+and then back-transformed to the correlation scale.
+}
+\examples{
+# Standard normal-theory confidence intervals
+SEtoCI(
+  estimates = c(0.5, 1.2),
+  std_errors = c(0.1, 0.2)
+)
+
+# Confidence intervals for correlations using Fisher z
+SEtoCI(
+  estimates = c(0.2, 0.4),
+  std_errors = c(0.05, 0.05),
+  is_correlation = TRUE
+)
 }

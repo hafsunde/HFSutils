@@ -2,6 +2,7 @@
 
 export(HFS_theme)
 export(SEtoCI)
+export(cor_fastCI)
 export(exact_rnorm)
 export(expSup)
 export(format_int)

@@ -13,6 +13,6 @@ convert_edu_level_to_years(edu_level)
 A numeric vector of years (NA for unknown/unmapped values).
 }
 \description{
-Converts NUS2000-coded education levels (0–8) to an approximate number of
+Converts NUS2000-coded education levels (0-8) to an approximate number of
 years of education.
 }

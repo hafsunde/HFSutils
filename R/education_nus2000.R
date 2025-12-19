@@ -1,6 +1,6 @@
 #' Convert NUS2000 education level to years of education
 #'
-#' Converts NUS2000-coded education levels (0–8) to an approximate number of
+#' Converts NUS2000-coded education levels (0-8) to an approximate number of
 #' years of education.
 #'
 #' @param edu_level Integer-like vector of NUS2000 education levels.

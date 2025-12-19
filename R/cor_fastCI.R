@@ -1,7 +1,7 @@
 #' Fast correlation with Fisher confidence interval
 #'
 #' Computes a correlation between two numeric vectors and returns a
-#' Fisher z–based confidence interval, using pairwise complete observations
+#' Fisher z-based confidence interval, using pairwise complete observations
 #' by default.
 #'
 #' @param vector1 Numeric vector.

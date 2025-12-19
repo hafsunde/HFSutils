@@ -31,7 +31,7 @@ A named numeric vector with elements:
 }
 \description{
 Computes a correlation between two numeric vectors and returns a
-Fisher z–based confidence interval, using pairwise complete observations
+Fisher z-based confidence interval, using pairwise complete observations
 by default.
 }
 \details{

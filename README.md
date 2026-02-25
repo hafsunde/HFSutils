@@ -71,3 +71,7 @@ function is for and when to use it.
   separators.
 - `to_percent()` — Convert proportions to percent strings.
 - `expSup()` — Format scientific notation as LaTeX-style exponent text.
+### Script-loading helper
+
+- `source_dir()` — Source all matching `.R` files in a directory
+  (optionally recursively) in sorted order.

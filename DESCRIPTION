@@ -1,6 +1,6 @@
 Package: HFSutils
 Title: Personal utility functions for HFS
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: 
     person("Hans Fredrik", "Sunde", , "hafsunde@gmail.com", role = c("aut", "cre"))
 Description: Personal utility functions for me.

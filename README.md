@@ -51,8 +51,11 @@ function is for and when to use it.
   optionally dichotomize to a binary trait at a requested prevalence.
 - `probit_icc()` — Estimate liability-scale ICC for binary outcomes
   from a random-intercept probit mixed model (`glmmTMB`).
-- `mx.ICC()` — Fit exchangeable ICC models in OpenMx for continuous or
-  dichotomous outcomes (liability-threshold for dichotomous traits).
+- `mx.ICC()` — Fit an OpenMx ICC model with an exchangeable covariance
+  structure (one shared variance parameter for diagonal elements and one
+  shared covariance parameter for off-diagonal elements, so `ICC =
+  covariance/variance`) for continuous or dichotomous outcomes
+  (liability-threshold for dichotomous traits).
 - `extract.ICC()` — Extract ICC estimate and confidence limits from
   `mx.ICC()` model output.
 - `build_constraint_matrix()` — Build diagonal/off-diagonal constraint

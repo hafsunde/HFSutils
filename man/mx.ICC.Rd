@@ -2,7 +2,7 @@
 % Please edit documentation in R/icc_openmx.R
 \name{mx.ICC}
 \alias{mx.ICC}
-\title{Estimate ICC with an exchangeable OpenMx model}
+\title{Estimate ICC using an OpenMx model with exchangeable covariance structure}
 \usage{
 mx.ICC(
   dt,
@@ -32,7 +32,12 @@ threshold) model.}
 A fitted \code{MxModel} object with an \code{ICC} algebra.
 }
 \description{
-Fits an exchangeable covariance model in OpenMx after reshaping long data to
-wide format (one row per group). For dichotomous outcomes, fits a liability
-threshold model.
+Fits an OpenMx model after reshaping long data to wide format (one row per
+group), using an exchangeable covariance structure. In this structure, all
+diagonal covariance-matrix elements share one variance parameter (\code{V}) and
+all off-diagonal elements share one covariance parameter (\code{r}). This
+constrains all repeated measures to have equal variance and every pair to have
+equal covariance. The ICC is then computed as \code{r / V}. For dichotomous
+outcomes, the same exchangeable covariance structure is estimated under a
+liability-threshold model.
 }

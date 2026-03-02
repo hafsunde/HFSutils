@@ -19,11 +19,16 @@ build_constraint_matrix <- function(size, diag_value, offdiag_value) {
   mat
 }
 
-#' Estimate ICC with an exchangeable OpenMx model
+#' Estimate ICC using an OpenMx model with exchangeable covariance structure
 #'
-#' Fits an exchangeable covariance model in OpenMx after reshaping long data to
-#' wide format (one row per group). For dichotomous outcomes, fits a liability
-#' threshold model.
+#' Fits an OpenMx model after reshaping long data to wide format (one row per
+#' group), using an exchangeable covariance structure. In this structure, all
+#' diagonal covariance-matrix elements share one variance parameter (`V`) and
+#' all off-diagonal elements share one covariance parameter (`r`). This
+#' constrains all repeated measures to have equal variance and every pair to
+#' have equal covariance. The ICC is then computed as `r / V`. For dichotomous
+#' outcomes, the same exchangeable covariance structure is estimated under a
+#' liability-threshold model.
 #'
 #' @param dt Input data frame/data.table.
 #' @param group_id Column name (character scalar) identifying clusters.

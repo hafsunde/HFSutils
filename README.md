@@ -45,6 +45,19 @@ function is for and when to use it.
 - `noise_filler()` — Add random noise to a variable when its variance
   is below 1, aiming for unit variance.
 
+### Intraclass correlation (ICC) helpers
+
+- `sim_icc()` — Simulate clustered outcomes with a target latent ICC;
+  optionally dichotomize to a binary trait at a requested prevalence.
+- `probit_icc()` — Estimate liability-scale ICC for binary outcomes
+  from a random-intercept probit mixed model (`glmmTMB`).
+- `mx.ICC()` — Fit exchangeable ICC models in OpenMx for continuous or
+  dichotomous outcomes (liability-threshold for dichotomous traits).
+- `extract.ICC()` — Extract ICC estimate and confidence limits from
+  `mx.ICC()` model output.
+- `build_constraint_matrix()` — Build diagonal/off-diagonal constraint
+  matrices used in OpenMx ICC model specification.
+
 ### Education recoding helpers
 
 - `convert_edu_level_to_years()` — Recode NUS2000 education levels

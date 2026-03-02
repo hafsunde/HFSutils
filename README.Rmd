@@ -110,3 +110,7 @@ If you're new to this package, this list shows what each exported function is fo
 - `format_int()` — Format integer-like values with thousands separators.
 - `to_percent()` — Convert proportions to percent strings.
 - `expSup()` — Format scientific notation as LaTeX-style exponent text.
+
+### Script-loading helper
+
+- `source_dir()` — Source all matching `.R` files in a directory (optionally recursively) in sorted order.

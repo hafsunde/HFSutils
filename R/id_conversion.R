@@ -32,10 +32,11 @@ normalize_id <- function(id_vec, prefix = "k2_") {
 #' @param id_vec Vector of IDs to convert.
 #' @param prefix Prefix to prepend to the converted IDs.
 #' @param width Integer width used for zero-padding.
+#' @param pad Logical; whether to left-pad IDs with zeros up to `width`.
 #'
 #' @return A character vector with IDs in prefixed form.
 #' @export
-revert_id <- function(id_vec, prefix = "k2_", width = 7L) {
+revert_id <- function(id_vec, prefix = "k2_", width = 7L, pad = TRUE) {
   if (is.character(id_vec) && startsWith(id_vec[1], prefix)) {
     message("Original id-structure detected, returned unchanged")
     return(id_vec)
@@ -47,5 +48,11 @@ revert_id <- function(id_vec, prefix = "k2_", width = 7L) {
     stop("Some ids could not be coerced to integer, something is wrong.")
   }
 
-  paste0(prefix, sprintf(paste0("%0", width, "d"), id_int))
+  id_chr <- if (isTRUE(pad)) {
+    sprintf(paste0("%0", width, "d"), id_int)
+  } else {
+    as.character(id_int)
+  }
+
+  paste0(prefix, id_chr)
 }

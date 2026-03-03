@@ -7,7 +7,7 @@
 \usage{
 normalize_id(id_vec, prefix = "k2_")
 
-revert_id(id_vec, prefix = "k2_", width = 7L)
+revert_id(id_vec, prefix = "k2_", width = 7L, pad = TRUE)
 }
 \arguments{
 \item{id_vec}{Vector of IDs to convert.}
@@ -15,6 +15,8 @@ revert_id(id_vec, prefix = "k2_", width = 7L)
 \item{prefix}{Prefix expected in character IDs.}
 
 \item{width}{Integer width used for zero-padding.}
+
+\item{pad}{Logical; whether to left-pad IDs with zeros up to \code{width}.}
 }
 \value{
 \code{normalize_id()} returns an integer vector when conversion is applied;

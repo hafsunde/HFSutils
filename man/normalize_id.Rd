@@ -2,41 +2,24 @@
 % Please edit documentation in R/id_conversion.R
 \name{normalize_id}
 \alias{normalize_id}
-\alias{revert_id}
 \title{Convert prefixed IDs to integer IDs}
 \usage{
 normalize_id(id_vec, prefix = "k2_")
-
-revert_id(id_vec, prefix = "k2_", width = 7L, pad = TRUE)
 }
 \arguments{
 \item{id_vec}{Vector of IDs to convert.}
 
 \item{prefix}{Prefix expected in character IDs.}
-
-\item{width}{Integer width used for zero-padding.}
-
-\item{pad}{Logical; whether to left-pad IDs with zeros up to \code{width}.}
 }
 \value{
-\code{normalize_id()} returns an integer vector when conversion is applied;
-otherwise the original \code{id_vec} unchanged.
-
-\code{revert_id()} returns a character vector with IDs in prefixed form.
+An integer vector when conversion is applied; otherwise the original
+\code{id_vec} unchanged.
 }
 \description{
-\code{normalize_id()} converts IDs with a known prefix (for example \code{"k2_"})
-to their integer core. This is useful when downstream processing is faster on
-integer IDs.
-
-\code{revert_id()} converts integer IDs (or integer-like IDs) back to prefixed
-IDs, padding with leading zeros.
+Converts IDs with a known prefix (for example \code{"k2_"}) to their integer
+core. This is useful when downstream processing is faster on integer IDs.
 }
 \details{
-If \code{id_vec} is not a character vector, or if the first element does not
-start with \code{prefix}, \code{normalize_id()} returns the input unchanged and emits a
-message.
-
-If \code{id_vec} already appears to be prefixed IDs (based on the first
-element), \code{revert_id()} returns the input unchanged and emits a message.
+If \code{id_vec} is not a character vector, or if the first element does not start
+with \code{prefix}, the input is returned unchanged and a message is emitted.
 }

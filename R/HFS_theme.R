@@ -29,20 +29,22 @@ HFS_theme <- function(Color = "black", BG = "transparent", ...) {
       # Transparent backgrounds
       panel.background = ggplot2::element_rect(fill = BG, color = NA),
       plot.background  = ggplot2::element_rect(fill = BG, color = NA),
+      strip.background  = ggplot2::element_rect(fill = BG, color = Color, linewidth = 1),
       legend.background = ggplot2::element_rect(fill = BG),
       legend.box.background = ggplot2::element_rect(fill = BG, color = BG),
 
       # Borders and lines
       panel.border = ggplot2::element_rect(fill = NA, color = Color, linewidth = 1),
-      axis.line    = ggplot2::element_line(color = Color, linewidth = 1),
       axis.ticks   = ggplot2::element_line(color = Color),
       line         = ggplot2::element_line(color = Color),
       rect         = ggplot2::element_rect(fill = BG, colour = Color),
+      axis.line    = ggplot2::element_blank(),
 
       # Text
-      text       = ggplot2::element_text(color = Color),
-      axis.text  = ggplot2::element_text(color = Color),
-      title      = ggplot2::element_text(color = Color),
-      legend.title = ggplot2::element_text(hjust = 0.5)
+      text         = ggplot2::element_text(color = Color),
+      axis.text    = ggplot2::element_text(color = Color),
+      title        = ggplot2::element_text(color = Color),
+      legend.title = ggplot2::element_text(hjust = 0.5),
+      strip.text   = ggplot2::element_text(color = Color)
     )
 }

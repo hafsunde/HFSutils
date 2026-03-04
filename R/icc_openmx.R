@@ -26,7 +26,7 @@ build_constraint_matrix <- function(size, diag_value, offdiag_value) {
 #' diagonal covariance-matrix elements share one variance parameter (`V`) and
 #' all off-diagonal elements share one covariance parameter (`r`). This
 #' constrains all repeated measures to have equal variance and every pair to
-#' have equal covariance. The ICC is then computed as `r / V`. For dichotomous
+#' have equal covariance. The ICC is then computed as \code{r / V}. For dichotomous
 #' outcomes, the same exchangeable covariance structure is estimated under a
 #' liability-threshold model.
 #'

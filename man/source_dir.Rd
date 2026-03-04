@@ -13,10 +13,10 @@ source_dir(path, pattern = "\\\\.R$", recursive = FALSE, local = FALSE)
 
 \item{recursive}{Logical; if \code{TRUE}, include files in subdirectories.}
 
-\item{local}{Passed to \code{source()} \code{local} argument.}
+\item{local}{Passed to \code{\link[base:source]{base::source()}} \code{local} argument.}
 }
 \value{
-Invisibly returns a list of values returned by \code{source()}.
+Invisibly returns a list of values returned by \code{\link[base:source]{base::source()}}.
 }
 \description{
 Lists files in a directory, sorts them alphabetically, and sources each

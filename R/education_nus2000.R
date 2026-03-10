@@ -3,6 +3,12 @@
 #' Converts NUS2000-coded education levels (0-8) to an approximate number of
 #' years of education.
 #'
+#' The category-to-years mapping follows page 8 of Statistics Norway's NUS2000
+#' documentation:
+#' https://www.ssb.no/utdanning/_attachment/283616?_ts=1583e453200
+#' (overview page:
+#' https://www.ssb.no/utdanning/norsk-standard-for-utdanningsgruppering).
+#'
 #' @param edu_level Integer-like vector of NUS2000 education levels.
 #'
 #' @return A numeric vector of years (NA for unknown/unmapped values).

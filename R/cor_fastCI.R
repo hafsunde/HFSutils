@@ -8,6 +8,8 @@
 #' @param vector2 Numeric vector.
 #' @param confidence_level Confidence level for the interval. Default is 0.95.
 #' @param missing_handling Method passed to \code{cor(use = )}.
+#' @param correlation_method Correlation method passed to \code{cor(method = )}.
+#'   Supported options are \code{"pearson"} (default) and \code{"spearman"}.
 #'
 #' @return
 #' A named numeric vector with elements:
@@ -27,13 +29,15 @@
 cor_fastCI <- function(vector1,
                        vector2,
                        confidence_level = 0.95,
-                       missing_handling = "pairwise.complete.obs") {
+                       missing_handling = "pairwise.complete.obs",
+                       correlation_method = "pearson") {
 
   stopifnot(
     is.numeric(vector1),
     is.numeric(vector2),
     length(vector1) == length(vector2),
-    confidence_level > 0 && confidence_level < 1
+    confidence_level > 0 && confidence_level < 1,
+    correlation_method %in% c("pearson", "spearman")
   )
 
   # Handle degenerate zero-variance cases explicitly
@@ -47,7 +51,12 @@ cor_fastCI <- function(vector1,
   }
 
   # Compute correlation
-  correlation <- stats::cor(vector1, vector2, use = missing_handling)
+  correlation <- stats::cor(
+    vector1,
+    vector2,
+    use = missing_handling,
+    method = correlation_method
+  )
 
   if (is.na(correlation)) {
     return(c(

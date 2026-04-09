@@ -8,7 +8,8 @@ cor_fastCI(
   vector1,
   vector2,
   confidence_level = 0.95,
-  missing_handling = "pairwise.complete.obs"
+  missing_handling = "pairwise.complete.obs",
+  correlation_method = "pearson"
 )
 }
 \arguments{
@@ -19,6 +20,9 @@ cor_fastCI(
 \item{confidence_level}{Confidence level for the interval. Default is 0.95.}
 
 \item{missing_handling}{Method passed to \code{cor(use = )}.}
+
+\item{correlation_method}{Correlation method passed to \code{cor(method = )}.
+Supported options are \code{"pearson"} (default) and \code{"spearman"}.}
 }
 \value{
 A named numeric vector with elements:

@@ -26,7 +26,7 @@ numformat <- function(value, nsmall = 2) {
     # Check for integer-valued numbers robustly
     is_integer <- isTRUE(all.equal(x, round(x)))
     
-    if (x == 0 | (is_integer & round(x) == 0) {
+    if (x == 0 | (is_integer & round(x) == 0)) {
       return("0")
     }
 

@@ -21,8 +21,9 @@ Invisibly returns a named character vector with file paths for
 the saved \code{pdf}, \code{svg}, and \code{png} files.
 }
 \description{
-Save a plot to three file formats in separate subfolders
-(\code{pdf}, \code{svg}, and \code{png}).
+Save a plot to three file formats in separate
+subfolders (
+\code{pdf}, \code{svg}, and \code{png}).
 The function uses the same defaults as \code{ggsave()} for plot selection,
 meaning that the last displayed plot is used when \code{plot} is not supplied.
 }
@@ -33,4 +34,5 @@ if (requireNamespace("ggplot2", quietly = TRUE)) {
   p <- ggplot(mtcars, aes(mpg, wt)) + geom_point()
   plotexport("figures/scatter", plot = p, width = 6, height = 4)
 }
+
 }

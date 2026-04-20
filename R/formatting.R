@@ -27,7 +27,7 @@ numformat <- function(value, nsmall = 2) {
       return("0")
     }
 
-    is_integer <- isTRUE(all.equal(x, round(x)) & x > .49)
+    is_integer <- isTRUE(all.equal(x, round(x))) & x > .49
 
     if (is_integer) {
       formatted_value <- format(round(x), nsmall = 0, big.mark = ",")

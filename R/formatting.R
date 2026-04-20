@@ -23,12 +23,12 @@ numformat <- function(value, nsmall = 2) {
       return(NA_character_)
     }
 
-    if (x == 0) {
-      return("0")
-    }
-
     # Check for integer-valued numbers robustly
     is_integer <- isTRUE(all.equal(x, round(x)))
+    
+    if (x == 0 | (is_integer & round(x) == 0) {
+      return("0")
+    }
 
     if (is_integer) {
       formatted_value <- format(round(x), nsmall = 0, big.mark = ",")
